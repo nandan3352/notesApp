@@ -42,7 +42,7 @@ export default function Navbar() {
               <Button  onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
-              <Button onClick={()=>{dispatch({type:LOGOUT})}}>Logout</Button>
+              <Button display={auth==false?"none":"block"} onClick={()=>{dispatch({type:LOGOUT})}}>Logout</Button>
             </Stack>
           </Flex>
         </Flex>
